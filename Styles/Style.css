@@ -1,0 +1,393 @@
+body{
+    background-color: #F3F5FC;
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    position: absolute;
+    width: 120px;
+    height: 48px;
+    left: 40px;
+    top: 40px;
+}
+header{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+main{
+    display: grid;
+    width: 90%;
+    height: 80vh;
+    margin: 0 0 50px 2%;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 0px;
+    gap: 20px;
+}
+
+.inputMessage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 900px;
+    padding: 20px 0 20px 20px;
+}
+
+#decryptedText::placeholder{
+    color: #0A3871;
+}
+
+#decryptedText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+
+    color: #0A3871;
+    background: transparent;
+    border: none;
+    resize: none;
+}
+
+#decryptedText:focus{
+    outline: none;
+}
+
+.Validate{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: relative;
+    margin-top: 50px;
+}
+
+.Validate p{
+    width: 225px;
+    height: 18px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+
+    color: #495057;
+
+    opacity: 0.8;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-bottom: 10px;
+}
+
+.buttons{
+    display: inline-block;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+}
+
+#encryptButton{
+    width: 300px;
+    height: 67px;
+    font-size: 16px;
+    background-color: #0A3871;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-right: 40px;
+}
+
+#decryptButton{
+    width: 300px;
+    height: 67px;
+    font-size: 16px;
+    color: #0A3871;
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-right: 40px;
+}
+
+.outputMessage{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.2);
+    border-radius: 32px;
+}
+
+.notShow{
+    width: 275px;
+    margin: 20% auto;
+}
+.notShow img{
+    width: 100px;
+}
+.noText{
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+
+    text-align: center;
+
+    color: #343A40;
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.disclaimerText, #notShow p{
+    height: 48px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    text-align: center;
+
+
+    color: #495057;
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.resultText{
+    height: auto;
+    align-items: center;
+}
+#encryptedText{
+    margin: 10px auto;
+    width: 325px;
+    min-height: 350px;
+    height: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    border: none;
+    resize: none;
+    display: none;
+    background: transparent;
+}
+
+#encryptedText:focus{
+    outline: none;
+}
+
+#encryptedText::placeholder{
+    color: black;
+}
+
+#copyButton{
+    box-sizing: border-box;
+    width: 336px;
+    height: 67px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0A3871;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    flex: none;
+    order: 0;
+    flex-grow: 1;
+    display: none;
+    margin: 0 auto;
+}
+
+@media screen and (max-width:1100px) {
+    header{
+        display: inline-block;
+        width: 100%;
+        height: 96px;
+        left: 0px;
+        top: 0px;
+    }
+    body{
+        width: auto;
+    }
+
+    main{
+        width: 95%;
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+    }
+
+    .inputMessage, .outputMessage{
+        width: auto;
+        height: auto;
+
+    }
+
+    #decryptedText{
+        height: 450px;
+        margin: 0;  
+    }
+    .buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        align-items: normal;
+        padding: 0px;
+        gap: 5px;
+        margin: 20% auto 0 auto;
+    }
+    #decryptButton, #encryptButton{
+        display: block;
+        width: 47%;
+        font-size: 24px;
+        height: 90px;
+        border-radius: 32px;
+    }
+    .buttons p{
+        display: none;
+    }
+
+    #encryptedText{
+        margin: 10px auto;
+        padding: 10px 0;
+        min-height: 50px;
+        max-height: 275px;
+        height: auto;
+        grid-row: 1 / 2;
+    }
+    #copyButton{
+        min-height: 30px;
+        height: auto;
+        margin: 0px auto 10px auto;
+        grid-row: 2 / 3;
+    }
+    .outputMessage{
+        resize: both;
+        width: 80%;
+        margin: 10px auto;
+        min-height: 120px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        overflow: auto;
+        padding: 10px;
+    }
+    .content{
+        width: 70%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .resultText{
+        display: grid;
+        grid-template-rows: 1fr auto; 
+    }
+
+    #notShow img{
+        display: none;
+    }
+}
+
+@media screen and (max-width:550px){
+    header{
+        display: inline-block;
+        width: 375px;
+        height: 96px;
+        left: 0px;
+        top: 0px;
+    }
+    body{
+        width: auto;
+    }
+
+    main{
+        width: 95%;
+        grid-template-columns: 1fr;
+        margin-bottom: 0;
+    }
+
+    .inputMessage, .outputMessage{
+        width: auto;
+        height: auto;
+    }
+
+    #decryptedText{
+        height: auto;
+        margin: 0;  
+    }
+    .buttons{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: normal;
+        align-items: normal;
+        padding: 0px;
+        gap: 24px;
+        margin-top: 20%;
+    }
+    #decryptButton, #encryptButton{
+        display: block;
+        width: 100%;
+        font-size: 24px;
+        height: 100px;
+        border-radius: 40px;
+        
+    }
+    .buttons p{
+        display: none;
+    }
+    .outputMessage{
+        width: 80%;
+        margin: 20px auto;
+        min-height: 315px;
+        height: auto;
+    }
+    #notShow img{
+        display: none;
+    }
+}
